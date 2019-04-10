@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OrdersService } from "./shared/orders.service";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule , ReactiveFormsModule } from "@angular/forms";
 import { environment } from "src/environments/environment";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
@@ -19,6 +19,8 @@ import { OrderListComponent } from './order-list/order-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],

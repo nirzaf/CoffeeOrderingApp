@@ -2,13 +2,13 @@
   <input placeholder="Order Number" 
          formControlName="orderNumber" 
          type="text" 
-         class="input-field col s12">
+         class="input-field col s12" required>
   <input placeholder="Customer Name" 
          formControlName="customerName" 
          type="text" 
-         class="input-field col s12">
+         class="input-field col s12" required>
 
-         <button class="waves-effect waves-light btn col s4" 
+         <button class="btn btn-success btn col s4" 
         *ngFor="let coffee of coffees" 
         (click)="addCoffee(coffee)"> {{coffee}}</button>
 <ul class="collection">
@@ -17,7 +17,7 @@
         <a class="col s1" (click)="removeCoffee(coffee)">x</a>
     </li>
     <button 
-    class="waves-effect waves-light btn col s12" (click)="onSubmit()">Submit</button>
+    class="btn primary btn col s12" (click)="onSubmit()">Submit</button>
 </ul>
 
 </form>

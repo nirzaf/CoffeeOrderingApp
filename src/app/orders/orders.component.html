@@ -7,17 +7,14 @@
          formControlName="customerName" 
          type="text" 
          class="input-field col s12" required>
-
          <button class="btn btn-success btn col s4" 
         *ngFor="let coffee of coffees" 
         (click)="addCoffee(coffee)"> {{coffee}}</button>
 <ul class="collection">
     <li *ngFor="let coffee of coffeeOrder">
         <span class="col s11"> {{ coffee }} </span>
-        <a class="col s1" (click)="removeCoffee(coffee)">x</a>
+        <button class="btn btn-danger"  (click)="removeCoffee(coffee)"><i class="fa fa-trash" aria-hidden="true" style="background-color:red;width: 30px"></i></button>        
     </li>
-    <button 
-    class="btn primary btn col s12" (click)="onSubmit()">Submit</button>
+    <button  class="btn col s12" (click)="onSubmit()"><i class="fa fa-shopping-cart" aria-hidden="true">Submit</i></button>
 </ul>
-
 </form>
